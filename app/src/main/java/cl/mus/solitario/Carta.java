@@ -43,48 +43,14 @@ public class Carta extends android.support.v7.widget.AppCompatImageButton {
         }
     }
 
-//    public void seleccionable(boolean b) {
-//        aux=this;
-//        aux.setAlpha((float)1);
-//        if(b){
-//            setOnTouchListener(new OnTouchListener() {
-//                @Override
-//                public boolean onTouch(View v, MotionEvent event) {
-//                    Carta carta = aux;
-//                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                        mcontext.mover(carta);
-//                        carta.setAlpha((float)0.4);
-//                    }
-//                    return false;
-//                }
-//            });
-//
-//        }else{
-//            setOnTouchListener(null);
-//        }
-//    }
+
     public int getNumero(){
         return this.numero;
     }
     public String getClase(){
         return this.clase;
     }
-//
-//    public void eliminar(){
-//        setVisibility(View.INVISIBLE);
-//        seleccionable(false);
-//        mcontext.actualizar();
-//    }
 
-    public void cambio( Carta carta){
-        this.numero = carta.getNumero();
-        this.clase = carta.getClase();
-        try {
-            Drawable d = Drawable.createFromStream(mcontext.getAssets().open(this.clase+"/"+this.clase+String.valueOf(numero)+".png"), null);
-            setBackground(d);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+
 
 }
